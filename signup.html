@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Farming Assistance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="CODE" content="">
+  <meta name="Nari" content=""> 
+<link rel="stylesheet" href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css">
+<link rel="stylesheet" href="/Farming/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Farming/css/bootstrap.min.css">
+
+	
+<script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#attributeForm').bootstrapValidator();
+});
+</script> 
+ 
+    <style>
+        #form   
+        {
+           color:black;
+           margin-top: 100px;
+        }
+         
+    </style>
+</head>
+    <?php
+    require'template.html';
+?>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			 
+			 
+			 
+			<div class="row clearfix" id="form">
+			
+				<div class="col-md-12 column">
+				
+					<form action="signup.php" id="attributeForm" method="post" class="form-horizontal" 
+						data-bv-message="This value is not valid"
+						data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+						data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+						data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                          
+						 
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Full name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="full_name" placeholder="Full name"
+                   data-bv-notempty="true" data-bv-notempty-message="The first name is required and cannot be empty" />
+        </div>
+        
+    </div>
+                        
+                      
+                        
+  
+                            <div class="form-group">
+        <label class="col-sm-3 control-label">Phone number</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="phno" type="text" placeholder="10 digit phone number"
+                   data-bv-notempty="true" data-bv-notempty-message="Phone number is required and cannot be empty"
+                    />
+        </div>
+                        </div>
+                        
+        <div class="form-group">
+        <label class="col-sm-3 control-label">Place</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="place" type="text" placeholder="xxxxxxxxx"
+                   data-bv-notempty="true" data-bv-notempty-message="Place field should not be empty"
+                    />
+        </div>
+    </div>
+                         
+                        <div class="form-group">
+        <label class="col-sm-3 control-label">State</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="state" type="text" placeholder="xxxxxxxxx"
+                   data-bv-notempty="true" data-bv-notempty-message="Place field should not be empty"
+                    />
+        </div>
+    </div>
+
+                        <div class="form-group">
+        <label class="col-sm-3 control-label">Email id</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="email" placeholder="example@example.com"
+                   data-bv-notempty="true" data-bv-notempty-message="Email id field cannot be empty." />
+        </div>
+        
+    </div>
+            
+     <div class="form-group">
+        <label class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-5">
+            <input type="password" class="form-control" name="pass_word" placeholder="min. 8 characters"
+                   data-bv-notempty="true" data-bv-notempty-message="The confirm password is required and cannot be empty"
+                   data-bv-identical="true" data-bv-identical-field="confirmPassword" data-bv-identical-message="The password and its confirm are not the same" data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username" data-bv-stringlength="true" data-bv-stringlength-min="6" data-bv-stringlength-max="30" data-bv-stringlength-message="The password must be more than 8" />
+		</div>
+		</div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Retype password</label>
+        <div class="col-sm-5">
+            <input type="password" class="form-control" name="confirmPassword" placeholder="Retype the password"
+                   data-bv-notempty="true" data-bv-notempty-message="The password is required and cannot be empty"
+                   data-bv-identical="true" data-bv-identical-field="pass_word" data-bv-identical-message="The password and its confirm are not the same"
+                   data-bv-different="true" data-bv-different-field="username" data-bv-different-message="The password cannot be the same as username" data-bv-stringlength="true" data-bv-stringlength-min="6" data-bv-stringlength-max="30" data-bv-stringlength-message="The password must be more than 8"/>
+    </div>	
+		</div>
+
+     
+    <div class="form-group">
+        <label class="col-sm-3 control-label"><a href="terms.html">Terms and Conditions</a></label>
+        <div class="col-sm-5">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="" value="Agree" data-bv-notempty="true" data-bv-message="Agree to the terms and conditions" /> I have read the terms and conditions
+                </label>
+            </div> 
+        </div>
+ 
+		<button type="submit" class="btn btn-success" >Register</button>
+ 
+    </div>
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
